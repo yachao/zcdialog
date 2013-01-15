@@ -1,0 +1,47 @@
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 arial,tahoma,\5b8b\4f53;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+address,cite,dfn,em,var{font-style:normal;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+a{text-decoration:none;color:#336699;}
+img{vertical-align:middle;}
+sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}
+legend{color:#000;}
+fieldset,img{border:0;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+body{height:2000px;}
+
+.zc-dialog{position:fixed;_position:absolute !important;}
+.zc-dialog .zc-dialog-shd{position:absolute;top:-8px;left:-8px;width:100%;height:100%;padding:8px;background:#000;opacity:0.3;filter:alpha(opacity=30);border-radius:5px;}
+.zc-dialog .zc-dialog-iframe{position:absolute;top:-8px;left:-8px;}
+.zc-dialog .zc-dialog-content{position:relative;z-index:2;background:#fff;border-radius:4px;}
+.zc-dialog .hd{height:40px;line-height:40px;padding-left:15px;background:#EBF5EB;font-size:14px;color:#999999;border-top-left-radius:4px;border-top-right-radius:4px;}
+.zc-dialog .bd{position:relative;padding:15px;}
+.zc-dialog .bd{zoom:1;}
+.zc-dialog .bd:after{clear:both;content:"";display:block;}
+.zc-dialog .zc-dialog-close{position:absolute;right:12px;top:10px;padding:0 3px;font:11px "Comic Sans MS";}
+a.zc-dialog-close:link{color:#B4B4B4;}
+a.zc-dialog-close:hover{color:#FAB0B6;}
+.ft{padding:10px 15px;text-align:right;}
+.ft .bn-flat{display:inline-block;overflow:hidden;margin-left:10px;border:1px solid #bbb;border-bottom-color:#999;border-radius:2px;vertical-align:middle;}
+.ft .bn-flat input{border:0;height:25px;padding:0 12px;color:#333;vertical-align:middle;background:#F8F8F8;cursor:pointer;}
+.ft a{display:inline-block;height:25px;line-height:25px;margin-left:10px;padding:0 14px;color:#333;border:1px solid #bbb;border-bottom-color:#999;border-radius:2px;vertical-align:middle;background:#F8F8F8;}
+.zc-state-focus .hd{color:#333333;}
+
+.platform-box .hd{height:112px;color:#C84E45;text-align:center;font:normal bold 26px/112px "Microsoft Yahei",\5b8b\4f53;background:#FEF9EE;}
+.platform-box .b-tip{padding-top:25px;text-align:center;}
+.platform-box .b-rec{padding:0 0 38px 38px;zoom:1;}
+.platform-box .b-rec li{float:left;margin:0 14px 0 0;padding-top:20px;}
+.platform-box .b-rec a{display:block;width:80px;padding-top:70px;text-align:center;color:#000;background:url("browsers.jpg") no-repeat 50% 0;}
+.platform-box .b-rec a:hover{margin-top:-10px;border-bottom:#b55e5a 10px solid;color:#b55e5a;font-weight:bold;}
+.platform-box .b-rec a.b-rec-fx{background-position:50% -90px;}
+.platform-box .b-rec a.b-rec-sf{background-position:50% -180px;}
+.platform-box .b-rec a.b-rec-ie{background-position:50% -270px;}
+
+.overlay{background:url("overlay.png");opacity:0.5;filter:alpha(opacity=50);}
+.catbox{text-align:center;}
+.catbox img{display:block;margin:0 auto 10px;}

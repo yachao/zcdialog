@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var o={},
+        isIE6=!-[1,] && !('minWidth' in document.documentElement.style);
+	if(isIE6){
+		var html=
+	    '<div>'
++            '<div class="b-tip">'
++                '<p>亲，您还在用这古老的浏览器？赶紧升级一下吧，您将会获得更好的体验！<br/>建议下载以下浏览器：</p>'
++            '</div>'
++            '<div class="b-rec">'
++                '<ul>'
++                    '<li><a class="b-rec-fx" href="http://www.mozilla.com/firefox/" target="_blank">火狐 Firefox</a></li>'
++                    '<li><a class="b-rec-gg" href="http://www.google.cn/chrome/" target="_blank">谷歌 Chrome</a></li>'
++                    '<li><a class="b-rec-sf" href="http://www.apple.com.cn/safari/" target="_blank">Safari</a></li>'
++                    '<li><a class="b-rec-ie" href="http://windows.microsoft.com/zh-CN/internet-explorer/products/ie/home" target="_blank">IE9 / IE8</a></li>'
++                '</ul>'
++            '</div>'
++        '</div>';
+	    zc.dialog({
+            cls:"platform-box",
+            title:"浏览器升级提示",
+            content:html,
+            width:460,
+            isHideClose:true,
+            isStick:true,
+            lock:true
+        }).open();
+	}
+	$("#open").click(function(){
+	    var dia = zc.dialog({
+	        id:"demo1",
+            cls:"box",
+            title:"欢迎",
+            content:'<div class="box-inner">欢迎使用zcdialog</div>',
+            width:400,
+            autoupdate:true,
+            drag:true,
+            buttons:["confirm","cancel"],
+			btnObj : {
+				confirm : {
+					text : "确定",
+					href : "javascript:void(0);",
+					cls : "btn-submit",
+					method : function() {
+						alert("welcome");
+						dia.close();
+					}
+				},
+				cancel : {
+					text : "取消",
+					href : "javascript:void(0);",
+					cls : "btn-close",
+					method : function(qxsc) {
+						dia.close();
+					}
+				}
+			}
+		}).open();
+	});
+	$("#showCat").click(function(){
+        zc.dialog({
+            id:"demo2",
+            url:"http://api.flickr.com/services/feeds/photos_public.gne?tags=cat&tagmode=any&format=json&jsoncallback=?",
+            dataType:"json",
+            title:"cat",
+            width:600,
+            autoupdate:true,
+            callback:function(data,o){
+                o.body.html("");
+                var wrap=$('<div class="catbox"></div>').appendTo(o.body);
+                $.each(data.items, function(i,item){
+                    $("<img/>").attr("src",item.media.m).appendTo(wrap);
+                });
+            }
+        }).open();
+    });
+});
+</script>
+<link href="style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div><a id="open" href="javascript:;">弹出对话框</a></div>
+	<div><a id="showCat" href="javascript:;">cat</a></div>
+	<script src="zcdialog.js" type="text/javascript"></script>
+</body>
+</html>
